@@ -9,6 +9,7 @@
 import Foundation
 
 /// Proxy class to make weak reference to handler.
+@available(iOSApplicationExtension, unavailable)
 open class OAuthSwiftURLHandlerProxy: OAuthSwiftURLHandlerType {
     weak var proxiable: OAuthSwiftURLHandlerType?
     public init(_ proxiable: OAuthSwiftURLHandlerType) {
@@ -18,7 +19,7 @@ open class OAuthSwiftURLHandlerProxy: OAuthSwiftURLHandlerType {
         proxiable?.handle(url)
     }
 }
-
+@available(iOSApplicationExtension, unavailable)
 extension OAuthSwiftURLHandlerType {
 
     public func weak() -> OAuthSwiftURLHandlerType {

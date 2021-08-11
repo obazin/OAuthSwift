@@ -51,7 +51,7 @@ extension AppDelegate: UIApplicationDelegate {
         applicationHandle(url: url)
         return true
     }
-    
+    @available(iOSApplicationExtension, unavailable)
     class var sharedInstance: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }

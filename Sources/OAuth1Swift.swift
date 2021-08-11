@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOSApplicationExtension, unavailable)
 open class OAuth1Swift: OAuthSwift {
 
     /// If your oauth provider doesn't provide `oauth_verifier`
@@ -73,6 +74,7 @@ open class OAuth1Swift: OAuthSwift {
 
     // MARK: functions
     // 0. Start
+    @available(iOSApplicationExtension, unavailable)
     @discardableResult
     open func authorize(withCallbackURL url: URLConvertible, headers: OAuthSwift.Headers? = nil, completionHandler completion: @escaping TokenCompletionHandler) -> OAuthSwiftRequestHandle? {
         guard let callbackURL = url.url else {

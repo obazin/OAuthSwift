@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOSApplicationExtension, unavailable)
 extension String {
 
     var parametersFromQueryString: [String: String] {

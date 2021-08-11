@@ -18,10 +18,11 @@ import AppKit
 
 /// Protocol to defined how to open the url.
 /// You could choose to open using an external browser, a safari controller, an internal webkit view controller, etc...
-@objc public protocol OAuthSwiftURLHandlerType {
+@objc @available(iOSApplicationExtension, unavailable) public protocol OAuthSwiftURLHandlerType {
     func handle(_ url: URL)
 }
 
+@available(iOSApplicationExtension, unavailable)
 public struct OAuthSwiftURLHandlerTypeFactory {
 
     static var `default`: OAuthSwiftURLHandlerType = OAuthSwiftOpenURLExternally.sharedInstance

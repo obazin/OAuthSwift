@@ -9,11 +9,13 @@
 import Foundation
 
 /// Either a String representing URL or a URL itself
+@available(iOSApplicationExtension, unavailable)
 public protocol URLConvertible {
 	var string: String { get }
 	var url: URL? { get }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension String: URLConvertible {
 	public var string: String {
 		return self
@@ -24,6 +26,7 @@ extension String: URLConvertible {
 	}
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension URL: URLConvertible {
 	public var string: String {
 		return absoluteString
@@ -34,6 +37,7 @@ extension URL: URLConvertible {
 	}
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension URLConvertible {
     public var encodedURL: URL {
         return URL(string: self.string.urlEncoded)!

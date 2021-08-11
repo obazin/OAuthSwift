@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOSApplicationExtension, unavailable)
 extension URL {
 
     func urlByAppending(queryString: String) -> URL {

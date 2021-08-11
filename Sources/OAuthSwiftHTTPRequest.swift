@@ -15,6 +15,7 @@ import UIKit
 
 let kHTTPHeaderContentType = "Content-Type"
 
+@available(iOSApplicationExtension, unavailable)
 open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
 
     // Using NSLock for Linux compatible locking 
@@ -64,6 +65,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
     }
 
     /// START request
+    @available(iOSApplicationExtension, unavailable)
     func start(completionHandler completion: CompletionHandler?) {
         guard request == nil else { return } // Don't start the same request twice!
 
@@ -112,8 +114,9 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
             #endif
         }
     }
-
+    
     /// Function called when receiving data from server.
+    @available(iOSApplicationExtension, unavailable)
     public static func completionHandler(completionHandler completion: CompletionHandler?, request: URLRequest, data: Data?, resp: URLResponse?, error: Error?) {
         #if os(iOS)
         #if !OAUTH_APP_EXTENSIONS
@@ -308,6 +311,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
 }
 
 // MARK: - Request configuraiton
+@available(iOSApplicationExtension, unavailable)
 extension OAuthSwiftHTTPRequest {
 
     /// Configuration for request
@@ -453,7 +457,7 @@ public struct URLSessionFactory {
 }
 
 // MARK: - status code mapping
-
+@available(iOSApplicationExtension, unavailable)
 extension OAuthSwiftHTTPRequest {
 
     class func descriptionForHTTPStatus(_ status: Int, responseString: String) -> String {

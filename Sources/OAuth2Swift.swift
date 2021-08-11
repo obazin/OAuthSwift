@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOSApplicationExtension, unavailable)
 open class OAuth2Swift: OAuthSwift {
 
     /// If your oauth provider need to use basic authentification
@@ -95,6 +96,7 @@ open class OAuth2Swift: OAuthSwift {
     }
 
     @discardableResult
+    @available(iOSApplicationExtension, unavailable)
     open func authorize(withCallbackURL callbackURL: URLConvertible?, scope: String, state: String, parameters: Parameters = [:], headers: OAuthSwift.Headers? = nil, completionHandler completion: @escaping TokenCompletionHandler) -> OAuthSwiftRequestHandle? {
 
         OAuthSwift.log?.trace("Start authorization ...")
@@ -334,6 +336,7 @@ open class OAuth2Swift: OAuthSwift {
 
     /// use RFC7636 PKCE credentials - convenience method
     @discardableResult
+    @available(iOSApplicationExtension, unavailable)
     open func authorize(withCallbackURL url: URLConvertible, scope: String, state: String, codeChallenge: String, codeChallengeMethod: String = "S256", codeVerifier: String, parameters: Parameters = [:], headers: OAuthSwift.Headers? = nil, completionHandler completion: @escaping TokenCompletionHandler) -> OAuthSwiftRequestHandle? {
         guard let callbackURL = url.url else {
             completion(.failure(.encodingError(urlString: url.string)))

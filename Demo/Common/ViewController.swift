@@ -1725,6 +1725,7 @@ import SafariServices
 #if canImport(AuthenticationServices)
 import AuthenticationServices
 #endif
+@available(iOSApplicationExtension, unavailable)
 @available(iOS 13.0, tvOS 13.0, macCatalyst 13.0, *)
 extension ViewController: ASWebAuthenticationPresentationContextProviding {
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {

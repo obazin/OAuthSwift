@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOSApplicationExtension, unavailable)
 open class OAuthSwift: NSObject, OAuthSwiftRequestHandle {
 
     // MARK: Properties
@@ -99,6 +100,7 @@ open class OAuthSwift: NSObject, OAuthSwiftRequestHandle {
 }
 
 // MARK: - alias
+@available(iOSApplicationExtension, unavailable)
 extension OAuthSwift {
 
     public typealias Parameters = [String: Any]
@@ -112,6 +114,7 @@ extension OAuthSwift {
 }
 
 // MARK: - Logging
+@available(iOSApplicationExtension, unavailable)
 extension OAuthSwift {
 
    static var log: OAuthLogProtocol?

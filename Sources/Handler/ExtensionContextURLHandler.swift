@@ -9,6 +9,7 @@
 import Foundation
 
 /// Open url using `NSExtensionContext``
+@available(iOSApplicationExtension, unavailable)
 open class ExtensionContextURLHandler: OAuthSwiftURLHandlerType {
 
     fileprivate var extensionContext: NSExtensionContext

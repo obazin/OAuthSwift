@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOSApplicationExtension, unavailable)
 extension Dictionary {
 
     func join(_ other: Dictionary) -> Dictionary {
@@ -71,9 +72,11 @@ extension Dictionary {
         return resultDictionary
     }
 }
-
+@available(iOSApplicationExtension, unavailable)
 func +=<K, V> (left: inout [K: V], right: [K: V]) { left.merge(right) }
+@available(iOSApplicationExtension, unavailable)
 func +<K, V> (left: [K: V], right: [K: V]) -> [K: V] { return left.join(right) }
+@available(iOSApplicationExtension, unavailable)
 func +=<K, V> (left: inout [K: V]?, right: [K: V]) {
     if left != nil { left?.merge(right) } else { left = right }
 }
